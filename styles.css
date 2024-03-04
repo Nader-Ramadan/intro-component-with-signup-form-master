@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+}
+:root {
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --white: hsl(0, 0%, 100%);
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+}
+body {
+    /* background: url(./design/active-states.jpg) no-repeat; */
+    background: url(./images/bg-intro-mobile.png) no-repeat var(--Red);
+    padding: 5rem 1.5rem 0rem;
+}
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 3rem;
+}
+.content {
+    text-align: center;
+    color: var(--white);
+    max-width: 500px;
+    display: flex;
+    flex-flow: column;
+}
+.content h1 {
+    font-size: 1.72rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    line-height: 2.45rem;
+}
+.content p {
+    margin-top: 1.25rem;
+    font-weight: 450;
+    line-height: 1.6rem;
+    opacity: 0.8;
+}
+.form {
+    display: flex;
+    flex-flow: column;
+    gap: 1.45rem;
+    padding: 1rem 0 0 0;
+}
+.sale {
+    text-align: center;
+    padding: 1.18rem 4.5rem;
+    color: var(--white);
+    background: var(--Blue);
+    border-radius: 0.8rem;
+    box-shadow: 0 0.3rem rgba(0, 0, 0, 0.2) ;
+}
+form {
+    display: flex;
+    flex-flow: column;
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    gap: 1rem;
+    background: var(--white);
+    box-shadow: 0 0.5rem rgba(0, 0, 0, 0.2) ;
+}
+.f-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.35rem ;
+    border: 1px solid var(--Dark-Blue);
+    padding: 1.05rem;
+}
+.f-cont:active,.f-cont:hover {
+    outline:1px solid var(--Blue);
+}
+input {
+    background: transparent;
+    font-size: 0.9rem;
+    width: 90%;
+    border: none;
+    outline: none;
+}
+.f-cont img {
+    display: none;
+}
+.msg {
+    color: var(--Red);
+    text-align: end;
+    font-style: italic;
+    display: none;
+}
+button {
+    cursor: pointer;
+    margin: -0.1rem 0;
+    border: 0;
+    background: none;
+    border-radius: 0.45rem;
+    padding: 0.98rem 2.2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.05rem;
+    color: var(--white);
+    background: var(--Green);
+    box-shadow: 0 0.5rem hsl(154, 59%, 41%) ;
+}
+button:hover {
+    opacity: 0.6;
+}
+form p {
+    margin-top: -0.35rem;
+    text-align: center;
+    font-size: 0.68rem;
+    padding: 0 1.3rem;
+    font-weight: 500;
+    color: var(--Grayish-Blue);
+    line-height: 1.3rem;
+}
+form p a{
+    text-decoration: none;
+    font-size: 0.68rem;
+    color: var(--Red);
+}
+.attribution {
+    text-align: center;
+    width: fit-content;
+    color: var(--Blue);
+    font-weight: 600;
+    margin: 10rem auto;
+}
+.attribution:hover {
+    animation: pop 0.5s forwards ease-out;
+}
+@keyframes pop {
+    100% {
+        scale: 1.5;
+        padding: 1rem 2rem;
+        border: 0.5rem solid var(--Green);
+        border-radius: 0.8rem;
+        box-shadow: 0.5rem 0.5rem var(--Blue);
+    }
+}
+.attribution a {
+    color: var(--Green);
+    text-decoration: none;
+}
+@media screen and (min-width: 425px) {
+    body {
+    background: url(./images/bg-intro-desktop.png) repeat var(--Red);
+    }
+    main {
+        margin: 1.5rem auto;
+        width: fit-content;
+        gap: 4.2rem;
+    }
+    .content {
+        text-align: start;
+        justify-content: center;
+    }
+    .content h1 {
+        margin-top: 1.55rem;
+        font-size: 3.05rem;
+        line-height:  3.3rem;
+    }
+    .content p {
+        margin-top: 2rem;
+    }
+    .form {
+        min-width: 33.7rem;
+        left: 0;
+    }
+    form {
+        padding: 2.46rem;
+        gap: 1.22rem;
+    }
+    .f-cont {
+        padding: 1.05rem 2rem;
+    }
+}
